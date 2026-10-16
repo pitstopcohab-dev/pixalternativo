@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10121a">
+<title>Pix | Pit Stop Cohab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0d0f17;--panel:#151824;--panel2:#1c2030;--line:#2b3042;--text:#f5f6fa;--muted:#9ba3b7;--gold:#fbbf24;--gold2:#fcd34d;--green:#34d399;--red:#fb7185}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#343044 0%,#151824 42%,#0d0f17 78%);font-family:Inter,system-ui,sans-serif;color:var(--text);display:flex;align-items:center;justify-content:center;padding:28px 16px}
+.shell{width:100%;max-width:980px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.brandmark{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--gold2),#d97706);color:#17130a;font:800 16px Outfit,sans-serif;box-shadow:0 8px 28px #fbbf2420}.brandname{font:700 18px Outfit,sans-serif;letter-spacing:.02em}.brandname span{color:var(--gold)}.brandcaption{color:var(--muted);font-size:12px;margin-top:3px}.status{border:1px solid #285b49;background:#102b25;color:#7ee7bd;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:700;letter-spacing:.06em;white-space:nowrap}.layout{display:grid;grid-template-columns:1fr .9fr;gap:18px}.card{background:linear-gradient(155deg,#191d2a,#131621);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 22px 70px #0003}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}.heading{font:700 clamp(25px,4vw,34px)/1.12 Outfit,sans-serif;letter-spacing:-.035em;margin:0 0 10px}.desc{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 25px}.field-label{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;font-weight:700;margin-bottom:9px}.field-label small{font-weight:500;color:var(--muted)}.money-input{display:flex;align-items:center;gap:10px;border:1px solid #393e50;background:#0f121b;border-radius:14px;padding:0 15px;transition:.2s}.money-input:focus-within{border-color:var(--gold);box-shadow:0 0 0 3px #fbbf2415}.currency{font-size:16px;color:var(--gold);font-weight:700}.money-input input{width:100%;min-width:0;background:transparent;border:0;outline:0;color:var(--text);font:700 30px Outfit,sans-serif;padding:17px 0}.money-input input::placeholder{color:#555d71}.quick-values{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 22px}.chip{background:#202536;border:1px solid #34394c;color:#c7ccda;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s}.chip:hover,.chip:focus{border-color:var(--gold);color:var(--gold)}.primary,.secondary{width:100%;border-radius:12px;padding:14px 16px;font:700 13px Inter,sans-serif;cursor:pointer;transition:transform .15s,filter .15s}.primary{background:linear-gradient(110deg,var(--gold2),#f59e0b);color:#17130a;box-shadow:0 8px 24px #f59e0b1c}.primary:hover{filter:brightness(1.06);transform:translateY(-1px)}.secondary{background:#222738;color:#e4e7f0;border:1px solid #34394c;margin-top:9px}.secondary:hover{border-color:#697188}.error{display:none;color:#fda4af;font-size:12px;margin-top:12px;line-height:1.5}.secure-note{display:flex;gap:8px;align-items:flex-start;color:var(--muted);font-size:11px;line-height:1.6;margin-top:18px}.secure-note svg{flex:none;margin-top:1px;color:var(--green)}.pay-card{display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100%;position:relative;overflow:hidden}.pay-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:#fbbf2408;top:-135px;right:-100px;pointer-events:none}.pay-title{font:700 20px Outfit,sans-serif;margin:2px 0 6px}.pay-sub{font-size:12px;color:var(--muted);line-height:1.6}.empty-state{display:flex;flex:1;min-height:260px;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);gap:14px}.qr-placeholder{width:112px;height:112px;border:1px dashed #454b60;border-radius:20px;display:grid;place-items:center;color:#697188;background:#10131d}.qr-placeholder svg{width:44px;height:44px}.qr-area{display:none;width:100%;margin-top:20px}.amount{font:800 35px Outfit,sans-serif;letter-spacing:-.04em;color:var(--gold2);margin:18px 0 4px}.receiver{font-size:13px;font-weight:700;margin-top:5px}.keyline{font-size:11px;color:var(--muted);margin-top:5px}.qr-frame{display:inline-flex;background:white;padding:12px;border-radius:16px;margin:18px auto 12px;box-shadow:0 8px 28px #0002;max-width:100%}#qrcode{display:flex;align-items:center;justify-content:center}#qrcode img,#qrcode canvas{display:block;max-width:100%;height:auto!important}.qr-instruction{font-size:11px;color:var(--muted);line-height:1.6;max-width:280px}.code-wrap{width:100%;text-align:left;margin-top:18px}.code-wrap label{display:block;font-size:11px;color:var(--muted);font-weight:700;margin-bottom:7px}.pixcode{width:100%;height:72px;resize:vertical;background:#0e1119;border:1px solid var(--line);border-radius:10px;padding:10px;color:#b8c0d4;font:10px/1.5 ui-monospace,monospace;outline:none}.footer{text-align:center;color:#656d82;font-size:10px;margin-top:18px;line-height:1.7}.footer strong{color:#969db0;font-weight:600}
+@media(max-width:720px){body{align-items:flex-start;padding:20px 12px}.topbar{margin-bottom:16px}.layout{grid-template-columns:1fr}.card{padding:22px;border-radius:18px}.pay-card{min-height:400px}.empty-state{min-height:210px}.heading{font-size:29px}.status{font-size:9px;padding:7px 9px}.brandname{font-size:16px}}
+@media(max-width:380px){.status{display:none}.money-input input{font-size:26px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brandmark">PS</div>
+      <div><div class="brandname">PIT STOP <span>COHAB</span></div><div class="brandcaption">Pagamento rápido via Pix</div></div>
+    </div>
+    <div class="status">● PIX DISPONÍVEL</div>
+  </header>
+  <div class="layout">
+    <section class="card">
+      <div class="eyebrow">Gerador de cobrança</div>
+      <h1 class="heading">Receba em segundos.</h1>
+      <p class="desc">Informe o valor da compra para gerar um QR Code Pix e o código Copia e Cola para seu cliente.</p>
+      <form id="pixForm" novalidate>
+        <div class="field-label"><label for="amount">Valor da cobrança</label><small>Em reais (BRL)</small></div>
+        <div class="money-input"><span class="currency">R$</span><input id="amount" inputmode="decimal" autocomplete="off" placeholder="0,00" aria-label="Valor em reais" autofocus></div>
+        <div class="quick-values" aria-label="Valores rápidos">
+          <button class="chip" type="button" data-value="10">R$ 10</button><button class="chip" type="button" data-value="20">R$ 20</button><button class="chip" type="button" data-value="50">R$ 50</button><button class="chip" type="button" data-value="100">R$ 100</button>
+        </div>
+        <button class="primary" type="submit">Gerar QR Code <span aria-hidden="true">↗</span></button>
+        <p class="error" id="error" role="alert"></p>
+      </form>
+      <div class="secure-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg><span>Confira os dados do recebedor no aplicativo do banco antes de confirmar o pagamento.</span></div>
+    </section>
+    <section class="card pay-card">
+      <div class="eyebrow">Área de pagamento</div>
+      <h2 class="pay-title">Seu QR Code Pix</h2>
+      <p class="pay-sub">O código aparecerá aqui depois de informar o valor.</p>
+      <div class="empty-state" id="empty">
+        <div class="qr-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v2M17 20h4M20 18v3"/></svg></div>
+        <div style="font-size:13px;font-weight:600;color:#c2c8d7">Aguardando valor</div>
+        <div style="font-size:11px;line-height:1.6;max-width:220px">Escolha um valor ao lado e clique em “Gerar QR Code”.</div>
+      </div>
+      <div class="qr-area" id="result" aria-live="polite">
+        <div class="amount" id="shownAmount">R$ 0,00</div>
+        <div class="receiver">THIAGO HUMBERTO</div>
+        <div class="keyline">Chave Pix: 18996238015</div>
+        <div class="qr-frame"><div id="qrcode"></div></div>
+        <div class="qr-instruction">Abra o aplicativo do seu banco e escaneie o QR Code para pagar.</div>
+        <div class="code-wrap"><label for="pixcode">PIX COPIA E COLA</label><textarea id="pixcode" class="pixcode" readonly></textarea></div>
+        <button class="primary" id="copyBtn" type="button" style="margin-top:12px">Copiar código Pix</button>
+        <button class="secondary" id="newBtn" type="button">Nova cobrança</button>
+      </div>
+    </section>
+  </div>
+  <footer class="footer"><strong>PIT STOP COHAB</strong> · Gerador de Pix<br>O QR Code é gerado neste navegador. A confirmação do pagamento deve ser feita no seu banco.</footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const PIX_KEY='+5518996238015';
+const MERCHANT_NAME='THIAGO HUMBERTO';
+const MERCHANT_CITY='PRESIDENTE PRUDENTE';
+const TXID='PITSTOPCOHAB';
+function emv(id,value){const v=String(value);return id+String(v.length).padStart(2,'0')+v}
+function crc16(payload){let crc=0xFFFF;for(let i=0;i<payload.length;i++){crc^=payload.charCodeAt(i)<<8;for(let j=0;j<8;j++){crc=(crc&0x8000)?(crc<<1)^0x1021:crc<<1;crc&=0xFFFF}}return crc.toString(16).toUpperCase().padStart(4,'0')}
+function makePix(amount){const account=emv('00','br.gov.bcb.pix')+emv('01',PIX_KEY);const extra=emv('05',TXID);let p=emv('00','01')+emv('01','12')+emv('26',account)+emv('52','0000')+emv('53','986')+emv('54',amount.toFixed(2))+emv('58','BR')+emv('59',MERCHANT_NAME)+emv('60',MERCHANT_CITY)+emv('62',extra)+'6304';return p+crc16(p)}
+function parseAmount(raw){let s=raw.trim().replace(/\s/g,'');if(s.includes(',')&&s.includes('.'))s=s.replace(/\./g,'').replace(',','.');else s=s.replace(',','.');if(!/^\d+(\.\d{1,2})?$/.test(s))return null;const n=Number(s);return Number.isFinite(n)&&n>0&&n<=99999999.99?Math.round(n*100)/100:null}
+const form=document.getElementById('pixForm'),input=document.getElementById('amount'),error=document.getElementById('error'),result=document.getElementById('result'),empty=document.getElementById('empty'),qr=document.getElementById('qrcode'),pixcode=document.getElementById('pixcode');
+document.querySelectorAll('[data-value]').forEach(b=>b.addEventListener('click',()=>{input.value=Number(b.dataset.value).toLocaleString('pt-BR',{minimumFractionDigits:2});input.focus()}));
+form.addEventListener('submit',e=>{e.preventDefault();error.style.display='none';const amount=parseAmount(input.value);if(amount===null){error.textContent='Digite um valor válido maior que zero. Exemplo: 25,00.';error.style.display='block';input.focus();return}if(typeof QRCode==='undefined'){error.textContent='Não foi possível carregar o QR Code. Verifique sua conexão e tente novamente.';error.style.display='block';return}const code=makePix(amount);pixcode.value=code;document.getElementById('shownAmount').textContent=amount.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});qr.innerHTML='';new QRCode(qr,{text:code,width:220,height:220,colorDark:'#10121a',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});empty.style.display='none';result.style.display='block'});
+document.getElementById('copyBtn').addEventListener('click',async function(){try{await navigator.clipboard.writeText(pixcode.value);this.textContent='✓ Código copiado!';setTimeout(()=>this.textContent='Copiar código Pix',1800)}catch(e){pixcode.focus();pixcode.select();document.execCommand('copy');this.textContent='Código selecionado';setTimeout(()=>this.textContent='Copiar código Pix',1800)}});
+document.getElementById('newBtn').addEventListener('click',()=>{result.style.display='none';empty.style.display='flex';input.value='';input.focus()});
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+PIT STOP COHAB — GERADOR DE PIX
+
+Como publicar no GitHub Pages:
+1. Baixe e extraia o ZIP.
+2. Envie o arquivo index.html para a raiz do repositório (ou renomeie index-pix-pitstop.html para index.html).
+3. No GitHub, abra Settings > Pages.
+4. Escolha Deploy from a branch, branch main e pasta /(root), depois salve.
+
+O gerador usa uma biblioteca de QR Code via CDN, então precisa de conexão com a internet para desenhar o QR. Confira o nome do recebedor no app do banco antes de confirmar qualquer pagamento.
