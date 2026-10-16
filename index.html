@@ -67,7 +67,7 @@
 <script>
 const PIX_KEY='+5518996238015';
 const MERCHANT_NAME='THIAGO HUMBERTO';
-const MERCHANT_CITY='PRESIDENTE PRUDENTE';
+const MERCHANT_CITY='PRES PRUDENTE';
 const TXID='PITSTOPCOHAB';
 function emv(id,value){const v=String(value);return id+String(v.length).padStart(2,'0')+v}
 function crc16(payload){let crc=0xFFFF;for(let i=0;i<payload.length;i++){crc^=payload.charCodeAt(i)<<8;for(let j=0;j<8;j++){crc=(crc&0x8000)?(crc<<1)^0x1021:crc<<1;crc&=0xFFFF}}return crc.toString(16).toUpperCase().padStart(4,'0')}
